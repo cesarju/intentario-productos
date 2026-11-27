@@ -8,6 +8,32 @@ Sirve para cualquier persona o asistente de IA.
 propia de tonos tierra. No se copian logos, fuentes ni componentes de Adobe:
 solo se toman sus principios.
 
+## 0. Contrato para asistentes de IA
+
+Esta es la fuente de verdad visual del proyecto. Antes de tocar estilos:
+
+1. Implementar **solo apariencia**: CSS y atributos `className`.
+2. Preservar nombres de componentes, props, estados, reducers, contextos, eventos,
+   handlers y textos existentes.
+3. Usar únicamente los tokens semánticos descritos abajo. No introducir colores,
+   tamaños, radios o sombras literales si existe un token equivalente.
+4. No inventar una paleta nueva ni sustituir los tonos tierra sin una actualización
+   explícita de este documento y de `src/index.css`.
+5. No extraer decisiones visuales de un ejemplo aislado: seguir la jerarquía y las
+   variantes documentadas.
+6. Después del cambio, verificar móvil y escritorio, estados `hover`, `focus-visible`,
+   `disabled`, contraste y ausencia de cambios en la lógica.
+
+**Orden de precedencia:**
+
+1. `docs/guia-estilos.md`
+2. `src/index.css` (tokens existentes)
+3. `src/App.css` (patrones reutilizables)
+4. CSS propio del componente
+
+Si esta guía, los tokens o un requisito gráfico entran en conflicto, detenerse y
+preguntar en lugar de asumir o elegir una variante que cambie la lógica.
+
 ## 1. Alcance (obligatorio)
 
 - Solo modificar archivos `.css`, atributos `className` y líneas `import './X.css'`.
